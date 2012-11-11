@@ -1,16 +1,16 @@
 {
-  "name": "wheat",
+  "name": "chaff",
   "description": "Git powered javascript blog.",
-  "tags": ["git","node","howtonode","blog"],
+  "tags": ["git","node","blog"],
   "version": "0.2.6",
   "author": "Tim Caswell <tim@creationix.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/creationix/wheat.git"
+    "url": "http://github.com/abovethewater/chaff.git"
   },
-  "bugs": "http://github.com/creationix/wheat/issues",
+  "bugs": "http://github.com/abovethewater/chaff/issues",
   "engines": ["node >= 0.4.0"],
-  "main": "lib/wheat.js",
+  "main": "lib/chaff.js",
   "dependencies": {
     "git-fs": ">=0.0.9",
     "simple-mime": ">=0.0.1",
