@@ -2,8 +2,8 @@
   "name": "chaff",
   "description": "Git powered javascript blog.",
   "tags": ["git","node","blog"],
-  "version": "0.2.6",
-  "author": "Tim Caswell <tim@creationix.com>",
+  "version": "0.3.0",
+  "author": "Joe Mathews <joe@abovethewater.co.uk>",
   "repository": {
     "type": "git",
     "url": "http://github.com/abovethewater/chaff.git"
@@ -17,6 +17,7 @@
     "haml": ">=0.2.5",
     "step": ">=0.0.3",
     "datetime": "0.0.3",
-    "proto": ">=0.1.0"
+    "proto": ">=0.1.0",
+    "nconf": ">=0.6.5"
   }
 }

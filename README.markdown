@@ -1,15 +1,50 @@
-# Wheat
+# Chaff
 
-Wheat is a blogging engine that reads a git repo full of markdown articles and presents them as a website.
+Chaff is a blogging engine that reads a git repo full of markdown articles and presents them as a website.
+
+Chaff is a derivative of [wheat][], the great blogging engine from [creationix][]
+
+This derivitive has been created due to both a lack of activity on the [wheat][] repo, and a desire to include further features, generic to the blogging platform.
 
 ## How to Install
 
-Either manually install all the dependencies or use npm.  It's packaged nicely now.
+Manually install all the dependencies.
 
-    npm install wheat
+    cd chaff
+    npm install
+    cd <site>
+    cp -r chaff node_modules
 
 For on the fly rendering of Graphviz graphs (DOT files), Graphviz will need to be [installed](http://www.graphviz.org/Download..php)
 
-That's it!  Checkout the wheat branch of howtonode.org for an example of how to use the library.
+That's it!  Checkout the chaff branch of abovethewater.co.uk for an example of how to use the library.
 
-<http://github.com/creationix/howtonode.org>
+<http://github.com/abovethewater/abovethewater.co.uk>
+
+## Configuration
+
+[nconf][] is used for configuration of globals
+
+### templateEngine
+
+default : 'haml'
+
+Allows the template engine being used to be changed to one of the user's choice
+
+Haml and jade are the only engines currently supported out the box.
+Haml is the default, and is a dependency of chaff.
+
+### todo
+
+Create a rendering engine adapter for various engines
+- compile
+- render
+
+### templateSuffix
+
+default : templateEngine
+
+[wheat]: https://github.com/creationix/wheat
+[nconf]: https://github.com/flatiron/nconf
+[creationix]: http://github.com/creationix
+
