@@ -4,7 +4,7 @@ Chaff is a blogging engine that reads a git repo full of markdown articles and p
 
 Chaff is a derivative of [wheat][], the great blogging engine from [creationix][]
 
-This derivitive has been created due to both a lack of activity on the [wheat][] repo, and a desire to include further features, generic to the blogging platform.
+This derivitive has been created due to both a lack of activity on the [wheat][] repo, and a desire to include features that have not been included.
 
 ## How to Install
 
@@ -24,6 +24,12 @@ That's it!  Checkout the chaff branch of abovethewater.co.uk for an example of h
 ## Configuration
 
 [nconf][] is used for configuration of globals
+
+### .markdown vs .md
+
+both .markdown and .md file suffixes are supported.
+
+The .markdown file will take priority over the .md file where appropriate.
 
 ### templateEngine
 
