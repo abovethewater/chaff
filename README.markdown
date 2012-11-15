@@ -25,11 +25,14 @@ That's it!  Checkout the chaff branch of abovethewater.co.uk for an example of h
 
 [nconf][] is used for configuration of globals
 
-### .markdown vs .md
+Configuration is expected in conf/config.json
 
-both .markdown and .md file suffixes are supported.
+### markdownSuffix
 
-The .markdown file will take priority over the .md file where appropriate.
+default : 'markdown'
+
+Allows the suffix to be changed.
+This is global, so all markdwon files must be consistently named.
 
 ### templateEngine
 
@@ -39,6 +42,12 @@ Allows the template engine being used to be changed to one of the user's choice
 
 Haml and jade are the only engines currently supported out the box.
 Haml is the default, and is a dependency of chaff.
+
+### templateSuffix
+
+default : templateEngine
+
+Allows the suffix of the templates to be defined.  Defaults tot he same value as the engine (most use cases).
 
 ### todo
 
