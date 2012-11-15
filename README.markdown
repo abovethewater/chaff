@@ -4,7 +4,7 @@ Chaff is a blogging engine that reads a git repo full of markdown articles and p
 
 Chaff is a derivative of [wheat][], the great blogging engine from [creationix][]
 
-This derivitive has been created due to both a lack of activity on the [wheat][] repo, and a desire to include further features, generic to the blogging platform.
+This derivitive has been created due to both a lack of activity on the [wheat][] repo, and a desire to include features that have not been included.
 
 ## How to Install
 
@@ -25,6 +25,15 @@ That's it!  Checkout the chaff branch of abovethewater.co.uk for an example of h
 
 [nconf][] is used for configuration of globals
 
+Configuration is expected in conf/config.json
+
+### markdownSuffix
+
+default : 'markdown'
+
+Allows the suffix to be changed.
+This is global, so all markdwon files must be consistently named.
+
 ### templateEngine
 
 default : 'haml'
@@ -33,6 +42,12 @@ Allows the template engine being used to be changed to one of the user's choice
 
 Haml and jade are the only engines currently supported out the box.
 Haml is the default, and is a dependency of chaff.
+
+### templateSuffix
+
+default : templateEngine
+
+Allows the suffix of the templates to be defined.  Defaults tot he same value as the engine (most use cases).
 
 ### todo
 
