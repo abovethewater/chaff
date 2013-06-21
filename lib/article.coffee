@@ -1,10 +1,7 @@
 class Article
 
-    constructor: (meta) ->
-
-        @meta = meta ||
-            title : ""
-            author: ""
-            date: ""
+    constructor: (data) ->
+        @meta = data.meta
+        @origContent = data.origContent
 
 module.exports = Article

@@ -8,7 +8,6 @@ preProcessMarkdown = (content) ->
 
     props =
         meta : {}
-        content: ""
 
     while (match = content.match(/^([a-z]+):\s*(.*)\s*\n/i)) 
         name = match[1].toLowerCase()
@@ -18,15 +17,17 @@ preProcessMarkdown = (content) ->
 
     props.origContent = content
 
-    return props
+    return props if props.meta.title && props.meta.author && props.origContent
 
 decode = (content) ->
 
     return if not content or content.length is 0
 
     props = preProcessMarkdown(content)
+
+    return if props is undefined
     
-    article = new Article(props.meta)
+    article = new Article(props)
     return article
 
 module.exports =
