@@ -6,9 +6,9 @@ Current supported modules
 
 * Git filesystem
 * Reads Markdown
-* Renders Haml templates
 
-Chaff is a derivative of [wheat][], the great blogging engine from [creationix][]
+Chaff started life as a fork of [wheat][], the great blogging engine from [creationix][]
+Now rewritten TDD style, with a fair bit of derivative code
 
 [wheat]: https://github.com/creationix/wheat
 [creationix]: http://github.com/creationix
