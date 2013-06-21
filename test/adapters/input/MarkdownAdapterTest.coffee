@@ -1,5 +1,6 @@
 should = require('should')
 adapter = require('../../../lib/adapters/MarkdownAdapter')
+fs = require("fs")
 
 class Callback
     constructor: (@done, @oncomplete) ->
@@ -20,19 +21,23 @@ describe('validate the markdown adapter', () ->
     )
 
     describe('decode', () ->
-        it('should callback with undefined if an invalid file passed in', (done) ->
-            adapter.decode("test/notfound", new Callback(done, (output) ->
-                should.not.exist(output)
-            ).callback)
+        it('should return with undefined if no content passed in', () ->
+            output = adapter.decode()
+            should.not.exist(output)
         )        
-        it('should fail silently if no callback is passed in', () ->
-            output = adapter.decode("test/notfound")
+        it('should return with undefined if empty content passed in', () ->
+            output = adapter.decode("")
             should.not.exist(output)
         )                
-        it('should return a valid object if a valid file passed in', (done) ->
-            adapter.decode("test/articles/minimum.md", new Callback(done, (output) ->
-                should.exist(output)
-            ).callback)
+        it('should return a valid object if content passed in', () ->
+            content = fs.readFileSync("test/articles/minimum.md" );            
+            output = adapter.decode(content)
+            should.exist(output)
         )                
+        it('should return valid metadata when reading a file', () ->
+            content = fs.readFileSync( "test/articles/minimum.md" );            
+            output = adapter.decode(content)
+            (output.meta.title).should.equal('Test')
+        )        
     )
 )
