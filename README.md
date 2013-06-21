@@ -4,8 +4,7 @@ Chaff is a modular blogging engine designed to read a repo of articles and prese
 
 Current supported modules
 
-* Git filesystem
-* Reads Markdown
+* Markdown input
 
 Chaff started life as a fork of [wheat][], the great blogging engine from [creationix][]
 
