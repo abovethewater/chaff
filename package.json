@@ -11,6 +11,11 @@
   "bugs": "http://github.com/abovethewater/chaff/issues",
   "engines": ["node >= 0.4.0"],
   "main": "lib/chaff.js",
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "coffee-script": "*"
+  },  
   "dependencies": {
     "git-fs": ">=0.0.10",
     "simple-mime": ">=0.0.1",
@@ -19,5 +24,8 @@
     "datetime": "0.0.3",
     "proto": ">=0.1.0",
     "nconf": ">=0.6.5"
-  }
+  },
+  "scripts": {
+    "test": "mocha --require should --reporter spec --compilers coffee:coffee-script --recursive"
+  }  
 }
